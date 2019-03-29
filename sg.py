@@ -12,7 +12,7 @@ class SentenceGenerator:
                with open(datafile, "rb") as f:
                     self.data = pickle.load(f)
           else:
-               self.data = build_data(level, outfile)
+               self.data = self.build_data(level, datafile)
 
      def build_data(self, level=3, outfile="data.pkl"):
           out1, out2, out3 = {}, {}, {}
